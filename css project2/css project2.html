@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        font-weight: 400;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .page1 {
+        background-color: black;
+        height: auto;
+
+        border-bottom-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+      }
+      h2 {
+        color: rgb(0, 0, 255);
+      }
+      main {
+        color: white;
+      }
+      header {
+        padding: 40px;
+      }
+
+      nav {
+        display: flex;
+        gap: 40px;
+        background-color: white;
+        border-radius: 40px;
+        padding: 10px;
+        color: black;
+      }
+      .nav-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      h1 {
+        text-align: center;
+        padding: 15px;
+        font-size: 60px;
+      }
+      p {
+        text-align: center;
+        font-size: small;
+        padding: 10px;
+      }
+      button {
+        padding: 10px;
+        width: 15%;
+        border-radius: 20px;
+        height: 12%;
+        background-color: blue;
+        color: white;
+        border: none;
+      }
+      .footer {
+        color: white;
+
+        font-size: 14px;
+      }
+      .footer-title {
+        color: white;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      .footer-section {
+        padding: 90px;
+      }
+      .news-row {
+        display: flex;
+
+        justify-content: space-between;
+      }
+      .news-card {
+        display: flex;
+        gap: 15px;
+        background-color: rgba(128, 128, 128, 0.512);
+        border-radius: 40px;
+        padding: 25px;
+        align-items: center;
+      }
+      .news-card img {
+        width: 50px;
+        height: 50px;
+      }
+      @media (max-width: 1000px) {
+        header {
+          padding: 20px;
+          flex-direction: column;
+          gap: 20px;
+        }
+        h2{
+          text-align: center;
+        }
+
+        .nav-center nav {
+          gap: 20px;
+          padding: 8px 20px;
+        }
+
+        h1 {
+          font-size: 40px;
+          padding: 5px;
+          
+        }
+
+        p {
+          font-size: 14px;
+        }
+
+        button {
+          width: 40%;
+          height: auto;
+          padding: 10px;
+        }
+
+        .footer-section {
+          padding: 40px;
+        }
+        .footer-title {
+          text-align: center;
+        }
+
+        .news-row {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .news-card {
+          width: 100%;
+          max-width: 400px;
+          height: auto;
+          padding: 20px;
+          margin: auto;
+        }
+
+        .news-card img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .page2 {
+        width: 100%;
+        display: flex;
+      }
+      .left {
+        padding: 60px;
+        width: 50%;
+      }
+      .left-container h1 {
+        font-size: 40px;
+        font-weight: 700;
+      }
+      .left-container p {
+        font-size: 16px;
+
+        color: gray;
+      }
+      .btn_stacking {
+        padding: 12px;
+        border: none;
+        border-radius: 30px;
+        margin-left: 35%;
+        width: 30%;
+        background-color: rgb(49, 43, 226);
+      }
+      .right {
+        width: 50%;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+
+        gap: 25px;
+      }
+      .small-card {
+        background: rgba(128, 128, 128, 0.174);
+        padding: 15px 25px;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: fit-content;
+        font-size: larger;
+      }
+      .small-card img {
+        width: 60px;
+      }
+      .big-card {
+        background-color: rgba(0, 0, 255, 0.77);
+        padding: 25px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+      }
+      .value {
+        font-size: 35px;
+      }
+      .label {
+        font-size: small;
+      }
+      .bottom-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+      }
+      .icon-card {
+        width: 80px;
+        height: 80px;
+        display: flex;
+      }
+      .info-card {
+        border-radius: 50px;
+        background-color: rgba(128, 128, 128, 0.362);
+        padding: 15px;
+      }
+
+      @media (max-width: 1000px) {
+        .page2 {
+          flex-direction: column;
+          align-items: center;
+          gap: 40px;
+        }
+
+        .left,
+        .right {
+          width: 100%;
+          padding: 30px;
+        }
+
+        .left-container h1 {
+          font-size: 32px;
+          text-align: center;
+        }
+
+        .left-container p {
+          text-align: center;
+          font-size: 15px;
+        }
+
+        .btn_stacking {
+          width: 60%;
+          margin-left: 20%;
+          font-size: 14px;
+        }
+
+        .small-card {
+          width: auto;
+          font-size: 16px;
+          padding: 18px;
+          justify-content: center;
+        }
+
+        .small-card img {
+          width: 50px;
+        }
+
+        .big-card {
+          width: auto;
+
+          border-radius: 35px;
+        }
+
+        .value {
+          font-size: 28px;
+        }
+
+        .label {
+          font-size: 13px;
+        }
+
+        .icon-card {
+          width: 70px;
+          height: 70px;
+        }
+
+        .info-card {
+          padding: 20px;
+          font-size: 14px;
+        }
+      }
+
+      .page3 {
+        padding: 60px;
+      }
+      .page3 header h1 {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 40px;
+      }
+      .boxes {
+        display: flex;
+        justify-content: space-between;
+
+        text-align: center;
+        width: 100%;
+      }
+      .box {
+        width: 20%;
+        background: rgba(255, 255, 255, 0.578);
+        padding: 45px;
+        border-radius: 30px;
+        box-shadow: 5px 10px rgba(0, 0, 0, 0.1);
+        color: black;
+      }
+      .box img {
+        background-color: rgba(0, 0, 255, 0.63);
+        border-radius: 40px;
+        margin-bottom: 20px;
+      }
+      .box h1 {
+        font-size: 32px;
+        margin-bottom: 15px;
+      }
+      .page3 a {
+        color: blue;
+        text-decoration: underline;
+      }
+      .bottom a {
+        color: black;
+      }
+      .bottom {
+        text-align: center;
+        padding: 40px;
+      }
+      @media (max-width: 1000px) {
+        .boxes {
+          flex-direction: column;
+          gap: 25px;
+        }
+
+        .box {
+          width: auto;
+          padding: 30px;
+        }
+
+        .box h1 {
+          font-size: 28px;
+        }
+      }
+      .page4 {
+        display: flex;
+        background-color: black;
+        height: 75vh;
+      }
+      .left {
+        width: 50%;
+        height: 100%;
+      }
+      .page4 h2 {
+        text-align: center;
+      }
+      .container {
+        color: white;
+      }
+
+      .page4 button {
+        border: none;
+        border-radius: 30px;
+        margin-left: 35%;
+        width: 25%;
+      }
+      .page4 h1 {
+        font-size: 40px;
+      }
+      .right2 {
+        /* background-color: aqua; */
+        width: 50%;
+        height: 100%;
+        display: flex;
+      }
+      .innerright {
+        display: flex;
+        align-items: end;
+        height: 50%;
+        width: 100%;
+        /* background-color: rebeccapurple; */
+        justify-content: end;
+        gap: 10px;
+        padding-right: 20px;
+      }
+      .right-container img {
+        width: 130px;
+      }
+      .img-container {
+        position: relative;
+        background-color: rgb(46, 46, 46);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+        width: 30%;
+        border-radius: 300px;
+      }
+      .img-container img {
+        height: 40%;
+        position: absolute;
+      }
+      .imageCard1 {
+        z-index: 1;
+        top: 50px;
+        right: 10px;
+      }
+      .imageCard2 {
+        z-index: 11;
+        top: 120px;
+      }
+      .imageCard3 {
+        z-index: 10;
+        top: 90px;
+        right: 40px;
+      }
+      @media (max-width: 1000px) {
+        .page4 {
+          flex-direction: column; 
+          height: auto;
+          padding: 30px 0;
+        }
+
+        .left {
+          width: 100%;
+          text-align: center;
+        }
+
+        .page4 h1 {
+          font-size: 28px;
+        }
+
+        .page4 button {
+          margin-left: 0;
+          width: 50%;
+        }
+
+        .right {
+          width: 100%;
+          justify-content: center;
+          margin-top: 30px;
+        }
+
+        .right-container img {
+          width: 100px; 
+        }
+
+        .img-container {
+          height: 250px;
+          width: 150px;
+        }
+
+        .img-container img {
+          height: 35%;
+        }
+
+        
+        .imageCard1 {
+          top: 30px;
+          right: 0;
+        }
+
+        .imageCard2 {
+          top: 90px;
+        }
+
+        .imageCard3 {
+          top: 70px;
+          right: 20px;
+        }
+      }
+
+      h5 {
+        color: white;
+        top: 20px;
+      }
+      .footer-title2 {
+        /* text-align: center; */
+        margin-bottom: 20px;
+        font-size: 50px;
+        color: white;
+      }
+      .footer-section2 {
+        background: black;
+        padding: 80px 60px;
+        color: #fff;
+        height: 100%;
+      }
+
+      .footer-section h1 {
+        font-size: 42px;
+        margin-bottom: 40px;
+        /* line-height: 1.2; */
+      }
+
+      .footer-cards {
+        display: flex;
+
+        justify-content: space-between;
+        /* flex-wrap: wrap; */
+      }
+
+      .fcard {
+        background: #1a1a1a;
+        padding: 20px;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .fcard img {
+        width: 32px;
+        height: 32px;
+      }
+
+      .fcard p {
+        color: #d2d2d2;
+        font-size: 16px;
+      }
+
+      @media (max-width: 1000px) {
+        .footer-cards {
+          flex-direction: column;
+          width: auto;
+        }
+      }
+
+      .fcard {
+        color: white;
+      }
+      .page6 {
+        display: flex;
+      }
+      .page6 h2 {
+        color: black;
+        height: auto;
+        display: flex;
+        margin-bottom: 20px;
+        font-weight: 400;
+      }
+      .left3 {
+        width: 50%;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+      }
+      .btn-4 {
+        width: 30%;
+        height: 15%;
+      }
+      .right3 {
+        width: 50%;
+      }
+      .imagebox1 {
+        width: 200px;
+      }
+      .imagebox2 {
+        width: 230px;
+      }
+      @media (max-width: 1000px) {
+        .page6 {
+          flex-direction: column;
+          text-align: center;
+        }
+        .right3 {
+          padding-left: 35px;
+        }
+      }
+      .page7 {
+        background-color: black;
+        padding: 60px;
+
+        border-radius: 30px;
+      }
+      .txt {
+        color: white;
+        font-size: 50px;
+        margin-left: 40px;
+      }
+      .tag-container,
+      .tag-container1 {
+        display: flex;
+        gap: 100px;
+
+        padding: 40px;
+      }
+      .tag {
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.275);
+        border-radius: 40px;
+        padding: 12px;
+      }
+
+      .tag:hover {
+        background-color: white;
+        color: black;
+      }
+      .final-section {
+        padding: 50px;
+      }
+      h5 {
+        color: blue;
+        font-size: larger;
+      }
+      .finalfooter {
+        padding: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: black;
+        color: white;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+      }
+
+      .final-section h5 {
+        font-size: 26px;
+        font-weight: 600;
+
+        color: blue;
+      }
+
+      .final-right {
+        display: flex;
+        gap: 10px;
+        font-size: 14px;
+      }
+
+      .final-right a {
+        color: white;
+        text-decoration: none;
+      }
+      @media (max-width: 1000px) {
+        .txt {
+          font-size: 40px;
+          margin-left: 0;
+          text-align: center;
+        }
+
+        .tag-container,
+        .tag-container1 {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+        }
+        .finalfooter {
+          flex-direction: column;
+        }
+        .page7 {
+          padding: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page1">
+      <header>
+        <h2>CoinFusion</h2>
+        <div class="nav-center">
+          <nav>
+            <a href="">Learn</a>
+            <a href="">Build</a>
+            <a href="">Explore</a>
+            <a href="">Join</a>
+            <a href="">Help</a>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <h1>
+          Bitcoin <br />
+          full potential
+        </h1>
+        <p>
+          Stacks enables DeFi, NFTs, apps,and <br />
+          smart contracts for bitcoin
+        </p>
+
+        <button>See whats built on stock</button>
+      </main>
+      <footer class="footer-section">
+        <h2 class="footer-title">Latest Ecosystem News</h2>
+        <div class="news-row">
+          <div class="news-card">
+            <img src="Vector.png" alt="" />
+            <p class="footer">
+              Alex raises $8.6M to <br />bring Defi to the...
+            </p>
+          </div>
+          <div class="news-card">
+            <img src="Vector (1).png" alt="" />
+            <p class="footer">
+              Nyc get own <br />
+              cryptocurrency after
+            </p>
+          </div>
+          <div class="news-card">
+            <img src="Vector (2).png" alt="" />
+            <p class="footer">
+              Alex raises $8.6M to <br />bring Defi to the...
+            </p>
+          </div>
+          <div class="news-card">
+            <img src="Component 128.png" alt="" />
+            <p class="footer">
+              Alex raises $8.6M to <br />bring Defi to the...
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="page2">
+      <div class="left">
+        <div class="left-container">
+          <h1>
+            Stacking, a <br />
+            new way to <br />earn bitcoin
+          </h1>
+          <p>
+            Hold and temporary lock STX,native currency,and <br />
+            support the networks security.As a rewards, <br />
+            you'll earn BTC.
+          </p>
+          <button class="btn_stacking">Start Stacking</button>
+        </div>
+      </div>
+      <div class="right">
+        <div class="card small-card">
+          <span>9.5%</span>
+          <img src="bitcoin.png" alt="" />
+        </div>
+        <div class="card big-card">
+          <span class="value">$864,896,126</span>
+          <span class="label">Total Value Locked</span>
+        </div>
+        <div class="bottom-row">
+          <div class="icon-card">
+            <img src="image 61.png" alt="" />
+          </div>
+          <div class="card info-card">Data courtesy of <br />stacking club</div>
+        </div>
+      </div>
+    </div>
+    <div class="page3">
+      <header>
+        <h1>
+          Stacks unleashed <br />
+          Bitcoin
+        </h1>
+      </header>
+      <main>
+        <div class="boxes">
+          <div class="box">
+            <img src="Component 129.png" alt="" />
+            <h1>
+              Proof of <br />
+              transfer
+            </h1>
+            <p>
+              The consensus mechanism that <br />
+              connects stacks and bitcoin.
+            </p>
+            <a href="">Learn more</a>
+          </div>
+          <div class="box">
+            <img src="Vector (3).png" alt="" />
+            <h1>
+              Bitcoin to <br />
+              NFTs
+            </h1>
+            <p>
+              NFTs is secured by bitcoin bt exploding <br />
+              on the network
+            </p>
+            <a href="">Learn more</a>
+          </div>
+          <div class="box">
+            <img src="Vector (4).png" alt="" />
+            <h1>Bitcoin <br />to DeFi</h1>
+            <p>
+              Stacks bring DeFi to bitcoin,unlocking <br />
+              over $2 trillion in capital.
+            </p>
+            <a href="">Learn more</a>
+          </div>
+        </div>
+      </main>
+      <div class="bottom">
+        <a href="" class="btn">See all features</a>
+      </div>
+    </div>
+    <div class="page4">
+      <div class="left">
+        <h2>Stacks for developer</h2>
+
+        <div class="container">
+          <h1>
+            Build powerful <br />
+            apps,secured <br />
+            by bitcoin
+          </h1>
+          <p>
+            Stacks connects to Bitcoin enabling younto build apps,smart <br />
+            conntracts,and digital media assets that are integrated with
+            Bitcoin,s <br />
+            security,capital,and networks.
+          </p>
+          <button>Start Stacking</button>
+        </div>
+      </div>
+      <div class="right2">
+        <div class="innerright">
+          <div class="right-container">
+            <img src="Group 389.png" alt="" />
+          </div>
+          <div class="img-container">
+            <img class="imageCard1" src="Group 378.png" alt="" />
+
+            <img class="imageCard2" src="Group 386.png" alt="" />
+
+            <img class="imageCard3" src="Rectangle 706.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page5">
+      <footer class="footer-section2">
+        <h2 class="footer-title2">
+          See what <br />
+          being built
+        </h2>
+        <div class="footer-cards">
+          <div class="fcard">
+            <img src="Component 131.png" alt="" />
+            <p>Stacks web <br />wallet</p>
+          </div>
+          <div class="fcard">
+            <img src="Vector (5).png" alt="" />
+            <p>DeFi plateform <br />alex</p>
+          </div>
+          <div class="fcard">
+            <img src="Component 132.png" alt="" />
+            <p>
+              Xverse app <br />
+              Jolicam
+            </p>
+          </div>
+          <div class="fcard">
+            <img src="Component 133.png" alt="" />
+            <p>
+              Xverse meta <br />
+              wallet
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="page6">
+      <div class="left3">
+        <div class="left-section">
+          <h2>
+            Stacks mission to create a better,user-owned <br />
+            decentralized internet.To do it we're unleashing <br />
+            Bitcoin,the most battle-tested and valueable <br />
+            blockchain in the world.
+          </h2>
+          <button class="btn-4">Learn about series</button>
+        </div>
+      </div>
+      <div class="right3">
+        <img class="imagebox1" src="Group 394.png" alt="" />
+        <img class="imagebox2" src="Group 396.png" alt="" />
+      </div>
+    </div>
+    <div class="page7">
+      <h2 class="txt">Explore Stacks</h2>
+      <div class="tag-container">
+        <div class="tag">wallets</div>
+        <div class="tag">Docs</div>
+        <div class="tag">Get GXT</div>
+        <div class="tag">Apps</div>
+        <div class="tag">Learning Sources</div>
+        <div class="tag">Eco System</div>
+        <div class="tag">Event</div>
+      </div>
+      <div class="tag-container1">
+        <div class="tag">Blog</div>
+        <div class="tag">Resources</div>
+        <div class="tag">Videos Learning</div>
+        <div class="tag">Etherum Learning</div>
+        <div class="tag">Smart contract</div>
+        <div class="tag">NFTs</div>
+      </div>
+      <footer class="finalfooter">
+        <div class="final-section">
+          <h5>CoinFusion</h5>
+        </div>
+        <div class="final-right">
+          <a href="#">Terms & conditions</a>
+          <span>|</span>
+          <a href="#">Sitemap</a>
+          <span>|</span>
+          <a href="#">Privacy Policy</a>
+          <span>|</span>
+          <a href="#">Cookies Policy</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
