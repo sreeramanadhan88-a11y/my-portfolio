@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0%;
+      }
+      Body {
+        font-family: "Inter", sans-serif;
+        .page2 {
+          font-family: "Poppins", sans-serif;
+        }
+      }
+
+      .page1 {
+        height: 100vh;
+        background: linear-gradient(to left, #e8eef1, #b7c3cc);
+
+        padding: 60px;
+      }
+      header {
+        color: black;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+        font-size: large;
+        font-weight: 900;
+      }
+      main {
+        color: black;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 70px;
+      }
+
+      .btn-1 {
+        width: 30%;
+        border-radius: 20px;
+        color: black;
+        border: 1px solid;
+        height: 60px;
+        font-weight: 700;
+        font-size: large;
+        cursor: pointer;
+        background: linear-gradient(to right, #e8eef1, #b7c3cc);
+      }
+      p {
+        padding-bottom: 20px;
+        color: rgba(0, 0, 0, 0.585);
+        font-size: larger;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+      }
+      @media (max-width: 1000px) {
+        .page1 {
+          padding: 40px 20px;
+          height: auto;
+        }
+
+        h1 {
+          font-size: 40px;
+          line-height: 1.2;
+        }
+
+        p {
+          font-size: 16px;
+          padding-bottom: 15px;
+        }
+
+        .text {
+          gap: 15px;
+        }
+
+        .btn-1 {
+          width: 60%;
+          height: 50px;
+          font-size: 16px;
+          border-radius: 15px;
+        }
+
+        nav {
+          gap: 25px;
+        }
+        h2 {
+          text-align: center;
+        }
+      }
+      .page2 {
+        background: linear-gradient(to right, #f3f6f8, #e1e7ec);
+
+        padding: 60px;
+        display: flex;
+      }
+
+      .page2 h2 {
+        color: black;
+        padding-bottom: 20px;
+        font-size: 45px;
+        text-decoration: underline;
+      }
+      .left {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #b7c3cc31;
+      }
+
+      .page2 p {
+        font-family: "Inter", sans-serif;
+        font-size: 18px;
+        color: #4a4a4a;
+        line-height: 1.8;
+      }
+      .btn-2 {
+        background-color: #1c1c1c;
+        color: white;
+        width: 20%;
+        height: 50px;
+        font-size: larger;
+        cursor: pointer;
+        font-weight: bolder;
+      }
+      .page2 .right img {
+        width: 380px;
+        height: auto;
+        border-radius: 20px;
+        object-fit: cover;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+      @media (max-width: 1000px) {
+        .page2 {
+          flex-direction: column;
+          padding: 40px;
+          text-align: center;
+        }
+
+        .page2 .left,
+        .page2 .right {
+          width: 100%;
+        }
+
+        .page2 h2 {
+          font-size: 35px;
+        }
+
+        .page2 p {
+          font-size: 16px;
+        }
+
+        .btn-2 {
+          width: 40%;
+          height: 45px;
+          font-size: 16px;
+          margin: 0 auto;
+        }
+
+        .page2 .right img {
+          width: 100%;
+          max-width: 350px;
+        }
+      }
+      .page3 {
+        padding: 60px;
+        background-color: rgba(201, 196, 255, 0.248);
+      }
+      .h1-section {
+        font-size: 50px;
+        padding-bottom: 30px;
+        text-decoration: underline;
+      }
+      .page3 p {
+        color: #4a4a4a;
+      }
+      .container {
+        max-width: 700px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.563);
+      }
+
+      .page3 h1 {
+        margin-top: 0;
+        font-size: 40px;
+        color: darkmagenta;
+      }
+
+      .section {
+        margin-bottom: 25px;
+      }
+
+      h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .item {
+        background: white;
+        padding: 12px;
+        border-radius: 8px;
+        margin: 10px 0;
+        border: 1px solid white;
+      }
+      .h1-section i {
+        margin-right: 10px;
+      }
+
+      .section h2 i {
+        margin-right: 8px;
+        color: rgb(139, 0, 139);
+      }
+
+      .item p i {
+        margin-right: 8px;
+        color: #555;
+      }
+      .section {
+        margin-bottom: 30px;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      .section:hover {
+        transform: translateY(-10px);
+      }
+      @media (max-width: 1000px) {
+        .page3 {
+          padding: 40px;
+        }
+
+        .container {
+          max-width: 90%;
+          padding: 25px;
+        }
+
+        .h1-section {
+          font-size: 40px;
+          text-align: center;
+        }
+
+        .page3 h1 {
+          font-size: 34px;
+        }
+
+        h2 {
+          font-size: 18px;
+        }
+
+        .item {
+          padding: 14px;
+        }
+
+        .section:hover {
+          transform: translateY(-5px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page1">
+      <header>
+        <nav>
+          <a href="">Home</a>
+          <a href="">About</a>
+          <a href="">Contact</a>
+          <a href="">Projects</a>
+          <a href="">Resume</a>
+        </nav>
+      </header>
+      <main>
+        <div class="text">
+          <h3>Hi! Everyone</h3>
+          <h1>
+            Sree Ram <br />
+            Fullstack Developer
+          </h1>
+          <p>
+            Builds and develops full-stack web applications, APIs, <br />
+            and databases for scalable digital solutions.
+          </p>
+          <div class="btn-touch">
+            <button class="btn-1">GET IN TOUCH</button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="page2">
+      <div class="about-container">
+        <div class="left">
+          <h2>About Me</h2>
+
+          <p>
+            A passionate Full-Stack Developer dedicated to building clean,
+            scalable, and user-focused digital experiences. I enjoy working
+            across both front-end and back-end, creating everything from
+            visually appealing interfaces to strong, dependable server-side
+            logic. <br />
+            <br />
+            My development style is rooted in problem-solving, attention to
+            detail, and writing clean, maintainable code. I love crafting
+            responsive layouts, designing smooth user interactions, and
+            developing efficient APIs that bring applications to life.
+          </p>
+          <div class="btn">
+            <button class="btn-2">Who Am I</button>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <img src="Gemini_Generated_Image_2nlmwt2nlmwt2nlm.png" alt="" />
+      </div>
+    </div>
+    <div class="page3">
+      <div class="container">
+        <h1 class="h1-section">
+          <i class="fa-solid fa-graduation-cap"></i>Academics
+        </h1>
+
+        <div class="section">
+          <h2>
+            <i class="fa-solid fa-book-open"></i>Higher Secondary Education
+          </h2>
+          <div class="item">
+            <p><i class="fa-solid fa-flask"></i>Subject:- Biology Science</p>
+            <p><i class="fa-solid fa-calendar"></i>Pass Out Year:- 2020</p>
+            <p><i class="fa-solid fa-percent"></i>Percentage:-65%</p>
+          </div>
+        </div>
+        <div class="section">
+          <div class="item">
+            <h2>
+              <i class="fa-solid fa-school"></i>Central Board Of Secondary
+              Education
+            </h2>
+            <p><i class="fa-solid fa-calendar"></i>Pass Out Year:-2018</p>
+            <p><i class="fa-solid fa-percent"></i>Percentage:-70%</p>
+          </div>
+        </div>
+        <div class="section">
+          <div class="item">
+            <h2>
+              <i class="fa-solid fa-building-columns"></i>Diploma In Mechanical
+              Engineering
+            </h2>
+            <p><i class="fa-solid fa-calendar"></i>Pass Out Year:-2023-2025</p>
+            <p><i class="fa-solid fa-percent"></i>CGPA:-6.86</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
